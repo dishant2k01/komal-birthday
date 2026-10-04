@@ -58,7 +58,7 @@ export default function StoryPhoto({
       />
 
       <div
-        className="relative w-full h-full overflow-hidden"
+        className="relative w-full h-[250px] overflow-hidden"
         style={{
           borderRadius: 3,
           padding: '8px 8px 22px',

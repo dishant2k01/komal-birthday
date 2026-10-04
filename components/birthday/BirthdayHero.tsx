@@ -179,7 +179,7 @@ export default function BirthdayHero() {
           >
             <div
               data-hero="label"
-              className="inline-flex flex-col items-center mb-5 sm:mb-4 self-center lg:self-start lg:mb-3"
+              className="inline-flex flex-col items-center mb-5 sm:mb-4 self-center lg:self-start lg:mb-3 pt-10"
             >
               <span data-hero="label-heart" className="mb-2.5" aria-hidden="true">
                 <FilledHeart size={10} color="rgba(216,180,119,0.85)" />

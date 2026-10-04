@@ -81,6 +81,8 @@ export const birthdayData = {
     label: 'MEMORIES WE MADE',
     title: 'Memory Gallery',
     subtitle: 'A few of my favorite moments...\nwith my favorite person.',
+    note: 'Connecting\nmoments\nwith you... ♡',
+    viewAll: 'View All Photos',
     photos: [
       {
         src: '/images/memory-3.jpg',
@@ -194,6 +196,7 @@ export const birthdayData = {
 
   footer: {
     line: 'Made with ❤️ for Komal',
+    date: '08 - 10 - 2001',
   },
 } as const;
 
