@@ -3,7 +3,7 @@
 import { useLayoutEffect, useRef } from 'react';
 import { birthdayData } from '@/lib/birthday-data';
 import { ensureGsap } from '@/lib/gsap-utils';
-import { DriedSprig, FilledHeart, RosePetal } from '@/components/cinematic-intro/Decorations';
+import { FilledHeart, RosePetal } from '@/components/cinematic-intro/Decorations';
 import StoryNote from './StoryNote';
 import StoryTimeline from './StoryTimeline';
 
@@ -301,13 +301,6 @@ export default function OurStorySection() {
           }}
         />
         <div
-          className="absolute opacity-45 hidden sm:block"
-          style={{ left: '2%', top: '22%', transform: 'rotate(-20deg)' }}
-        >
-          <DriedSprig style={{ width: 90 }} />
-        </div>
-
-        <div
           className="absolute hidden lg:block"
           style={{
             right: '-2%',
@@ -319,18 +312,6 @@ export default function OurStorySection() {
             filter: 'blur(18px)',
           }}
         />
-        <div
-          className="absolute hidden lg:block opacity-60"
-          style={{ right: '3%', top: '38%', transform: 'rotate(12deg)' }}
-        >
-          <DriedSprig flip style={{ width: 110 }} />
-        </div>
-        <div
-          className="absolute hidden lg:block opacity-50"
-          style={{ right: '1%', bottom: '18%', transform: 'rotate(-8deg)' }}
-        >
-          <DriedSprig style={{ width: 95 }} />
-        </div>
 
         {[
           { left: '12%', bottom: '6%', size: 22, rot: -15 },

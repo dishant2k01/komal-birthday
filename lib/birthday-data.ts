@@ -6,7 +6,7 @@ export const birthdayData = {
   dateLong: '08 October 2001',
   introImage: '/images/komal-hero.jpg',
   heroImage: '/images/hero02.jpg',
-  finalImage: '/images/final.jpg',
+  finalImage: '/images/surprise-couple.jpg',
   giftImage: '/images/gift-box.png',
 
   hero: {
@@ -196,7 +196,6 @@ export const birthdayData = {
 
   footer: {
     line: 'Made with ❤️ for Komal',
-    date: '08 - 10 - 2001',
   },
 } as const;
 

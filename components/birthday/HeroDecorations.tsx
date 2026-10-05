@@ -1,6 +1,6 @@
 'use client';
 
-import { DriedSprig, RosePetal } from '@/components/cinematic-intro/Decorations';
+import { RosePetal } from '@/components/cinematic-intro/Decorations';
 
 export default function HeroDecorations() {
   return (
@@ -76,27 +76,6 @@ export default function HeroDecorations() {
         />
       ))}
       <div
-        className="absolute opacity-50"
-        style={{ left: '2%', bottom: '10%', zIndex: 3, transform: 'rotate(-15deg)' }}
-      >
-        <DriedSprig style={{ width: 100, opacity: 0.55 }} />
-      </div>
-
-      {/* Right sprigs behind photo area */}
-      <div
-        data-hero="flora-right"
-        className="absolute hidden lg:block"
-        style={{
-          right: '6%',
-          top: '14%',
-          zIndex: 3,
-          opacity: 0.7,
-          filter: 'blur(0.4px)',
-        }}
-      >
-        <DriedSprig style={{ width: 120 }} />
-      </div>
-      <div
         className="absolute hidden lg:block rounded-full"
         style={{
           right: '8%',
@@ -109,17 +88,6 @@ export default function HeroDecorations() {
           zIndex: 2,
         }}
       />
-      <div
-        className="absolute hidden lg:block"
-        style={{
-          right: '4%',
-          bottom: '18%',
-          zIndex: 3,
-          opacity: 0.55,
-        }}
-      >
-        <DriedSprig flip style={{ width: 100 }} />
-      </div>
 
       {/* Bottom petals */}
       {[

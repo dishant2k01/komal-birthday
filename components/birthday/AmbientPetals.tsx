@@ -1,6 +1,4 @@
-'use client';
-
-import { useEffect, useState } from 'react';
+import { useMemo } from 'react';
 import { RosePetal } from '@/components/cinematic-intro/Decorations';
 
 type Petal = {
@@ -18,29 +16,30 @@ type Petal = {
   tone: string;
 };
 
-export default function AmbientPetals({ count }: { count?: number }) {
-  const [petals, setPetals] = useState<Petal[]>([]);
+function generatePetals(n: number): Petal[] {
+  return Array.from({ length: n }, (_, i) => {
+    const s1 = ((i * 47 + 13) % 100) / 100;
+    const s2 = ((i * 73 + 29) % 100) / 100;
+    const s3 = ((i * 31 + 17) % 100) / 100;
+    return {
+      id: i,
+      x: s1 * 100,
+      y: s2 * 100,
+      size: s3 * 16 + 14,
+      op: s1 * 0.28 + 0.22,
+      dur: s2 * 12 + 14,
+      delay: s3 * -12,
+      px: `${(s1 - 0.5) * 28}px`,
+      py: `${(s2 - 0.5) * 36}px`,
+      rot: s3 * 50 - 25,
+      blur: i % 4 === 0 ? 1.2 : 0,
+      tone: i % 2 === 0 ? '#8B3A4A' : '#6B2436',
+    };
+  });
+}
 
-  useEffect(() => {
-    const isMobile = window.innerWidth < 768;
-    const n = count ?? (isMobile ? 4 : 10);
-    setPetals(
-      Array.from({ length: n }, (_, i) => ({
-        id: i,
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        size: Math.random() * 16 + 14,
-        op: Math.random() * 0.3 + 0.22,
-        dur: Math.random() * 12 + 14,
-        delay: Math.random() * -12,
-        px: `${(Math.random() - 0.5) * 28}px`,
-        py: `${(Math.random() - 0.5) * 36}px`,
-        rot: Math.random() * 50 - 25,
-        blur: i % 4 === 0 ? 1.2 : 0,
-        tone: i % 2 === 0 ? '#8B3A4A' : '#6B2436',
-      }))
-    );
-  }, [count]);
+export default function AmbientPetals({ count }: { count?: number }) {
+  const petals = useMemo(() => generatePetals(count ?? 8), [count]);
 
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">

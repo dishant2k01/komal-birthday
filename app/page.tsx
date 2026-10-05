@@ -1,20 +1,18 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useSyncExternalStore } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import CinematicIntro from '@/components/cinematic-intro';
 import BirthdayExperience from '@/components/birthday/BirthdayExperience';
 
 type Stage = 'intro' | 'main';
 
+const emptySubscribe = () => () => {};
+
 export default function Home() {
   const [stage, setStage] = useState<Stage>('intro');
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
   const transitioning = useRef(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const handleSurpriseClick = useCallback(() => {
     if (transitioning.current) return;

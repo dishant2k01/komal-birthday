@@ -116,6 +116,16 @@ body::before {
   50%      { opacity: 1; transform: scale(1.15) rotate(18deg); }
 }
 
+@keyframes birthday-bob {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%      { transform: translateY(-7px) rotate(3deg); }
+}
+
+@keyframes birthday-bob-reverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%      { transform: translateY(-6px) rotate(-3deg); }
+}
+
 /* Gold gradient text */
 .text-gold {
   color: var(--gold);

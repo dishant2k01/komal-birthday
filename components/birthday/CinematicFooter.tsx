@@ -35,19 +35,15 @@ export default function CinematicFooter() {
           {birthdayData.footer.line}
         </p>
         <div
-          className="mx-auto mb-5 h-px w-16"
+          className="mx-auto mb-4 h-px w-16"
           style={{
             background:
               'linear-gradient(90deg, transparent, #D8B477, transparent)',
           }}
         />
-        <p
-          className="font-sans text-xs tracking-[0.35em] mb-6"
-          style={{ color: 'rgba(185,170,162,0.45)' }}
-        >
-          {birthdayData.footer.date}
-        </p>
-        <FilledHeart size={12} />
+        <div className="flex justify-center">
+          <FilledHeart size={12} />
+        </div>
       </div>
     </footer>
   );

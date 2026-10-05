@@ -4,9 +4,7 @@ import { forwardRef } from 'react';
 import Image from 'next/image';
 import { birthdayData } from '@/lib/birthday-data';
 import {
-  DriedSprig,
   FilmStripEdge,
-  FilledHeart,
   RosePetal,
   WaxSeal,
 } from './Decorations';
@@ -71,28 +69,7 @@ const IntroPhoto = forwardRef<HTMLDivElement, IntroPhotoProps>(
           <FilmStripEdge />
         </div>
 
-        {/* Dried sprigs */}
-        <div
-          data-intro="sprig"
-          className="absolute pointer-events-none"
-          style={{
-            top: isDesktop ? '-8%' : '-6%',
-            right: isDesktop ? '-14%' : '-10%',
-            zIndex: 3,
-            opacity: isDesktop ? 0.85 : 0.7,
-          }}
-        >
-          <DriedSprig style={{ width: isDesktop ? 110 : 72, height: 'auto' }} />
-        </div>
-        {isDesktop && (
-          <div
-            data-intro="sprig-2"
-            className="absolute pointer-events-none"
-            style={{ bottom: '-4%', left: '-12%', zIndex: 3, opacity: 0.75 }}
-          >
-            <DriedSprig flip style={{ width: 100, height: 'auto' }} />
-          </div>
-        )}
+
 
         {/* Petals near photo edges */}
         <div

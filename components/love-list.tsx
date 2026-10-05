@@ -94,7 +94,7 @@ export default function LoveList() {
           className="font-serif text-xl italic mt-16"
           style={{ color: 'var(--text-muted)' }}
         >
-          "...and so much more that words could never hold."
+          &ldquo;...and so much more that words could never hold.&rdquo;
         </motion.p>
       </div>
     </section>

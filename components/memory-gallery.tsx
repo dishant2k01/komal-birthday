@@ -47,11 +47,6 @@ export default function MemoryGallery() {
     return () => { document.body.style.overflow = ''; };
   }, [lightbox]);
 
-  // Masonry column distribution
-  const col1 = photos.filter((_, i) => i % 2 === 0);
-  const col2 = photos.filter((_, i) => i % 2 !== 0);
-  const col3: typeof photos = [];
-
   return (
     <section id="gallery" className="section-padding" style={{ background: 'var(--bg-mid)' }}>
       <div className="max-w-5xl mx-auto" ref={ref}>

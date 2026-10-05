@@ -1,6 +1,6 @@
 'use client';
 
-import { DriedSprig, RosePetal } from '@/components/cinematic-intro/Decorations';
+import { RosePetal } from '@/components/cinematic-intro/Decorations';
 
 export default function GalleryDecorations() {
   return (
@@ -22,18 +22,7 @@ export default function GalleryDecorations() {
           filter: 'blur(14px)',
         }}
       />
-      <div
-        className="absolute left-[2%] top-[18%] opacity-40 hidden lg:block"
-        style={{ transform: 'rotate(-16deg)' }}
-      >
-        <DriedSprig style={{ width: 80 }} />
-      </div>
-      <div
-        className="absolute right-[6%] bottom-[12%] opacity-45 hidden lg:block"
-        style={{ transform: 'rotate(8deg)' }}
-      >
-        <DriedSprig flip style={{ width: 70 }} />
-      </div>
+
 
       {[
         { left: '22%', top: '30%', size: 18, rot: -20 },

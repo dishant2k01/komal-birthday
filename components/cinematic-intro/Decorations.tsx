@@ -90,61 +90,17 @@ export function RosePetal({
 }
 
 /** Dried baby's-breath style sprig */
-export function DriedSprig({
-  className = '',
-  style,
-  flip = false,
-}: {
-  className?: string;
-  style?: CSSProperties;
-  flip?: boolean;
-}) {
-  return (
-    <svg
-      width="90"
-      height="120"
-      viewBox="0 0 90 120"
-      className={className}
-      style={{
-        ...style,
-        transform: `${flip ? 'scaleX(-1) ' : ''}${style?.transform ?? ''}`.trim(),
-      }}
-      aria-hidden="true"
-    >
-      <path
-        d="M45 118C45 90 42 70 38 48C35 32 40 18 48 8"
-        stroke="rgba(180,150,120,0.55)"
-        strokeWidth="1.4"
-        fill="none"
-      />
-      <path
-        d="M40 70C28 62 18 58 12 52"
-        stroke="rgba(180,150,120,0.4)"
-        strokeWidth="1"
-        fill="none"
-      />
-      <path
-        d="M42 52C54 44 66 40 74 34"
-        stroke="rgba(180,150,120,0.4)"
-        strokeWidth="1"
-        fill="none"
-      />
-      {[
-        [48, 10], [42, 22], [50, 30], [36, 40], [44, 48],
-        [14, 52], [22, 58], [30, 64], [70, 34], [62, 42], [54, 48],
-        [38, 58], [46, 66], [40, 78], [48, 86],
-      ].map(([x, y], i) => (
-        <circle
-          key={i}
-          cx={x}
-          cy={y}
-          r={i % 3 === 0 ? 2.4 : 1.7}
-          fill="rgba(232,210,180,0.55)"
-        />
-      ))}
-    </svg>
-  );
+export type BirthdayDecorVariant = 'cake' | 'gift' | 'heart' | 'cluster' | 'auto';
+
+/**
+ * BirthdayDecor: removed cakes & gift boxes as requested.
+ */
+export function BirthdayDecor(): null {
+  return null;
 }
+
+/** Backward-compatible alias */
+export const DriedSprig = BirthdayDecor;
 
 /** Wax seal for desktop photo corner */
 export function WaxSeal({ className = '', style }: { className?: string; style?: CSSProperties }) {

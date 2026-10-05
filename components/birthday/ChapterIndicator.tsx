@@ -9,10 +9,6 @@ export default function ChapterIndicator() {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const sections = birthdayData.nav
-      .map((n) => document.getElementById(n.id))
-      .filter(Boolean) as HTMLElement[];
-
     const onScroll = () => {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       setProgress(max > 0 ? window.scrollY / max : 0);

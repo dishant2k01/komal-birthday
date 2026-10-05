@@ -3,7 +3,7 @@
 import { forwardRef, useRef } from 'react';
 import Image from 'next/image';
 import { birthdayData } from '@/lib/birthday-data';
-import { DriedSprig, RosePetal } from '@/components/cinematic-intro/Decorations';
+import { RosePetal } from '@/components/cinematic-intro/Decorations';
 
 const HeroPhoto = forwardRef<HTMLDivElement>(function HeroPhoto(_props, ref) {
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -60,22 +60,7 @@ const HeroPhoto = forwardRef<HTMLDivElement>(function HeroPhoto(_props, ref) {
         }}
       />
 
-      {/* Sprigs around photo */}
-      <div
-        data-photo-flora
-        data-hero="photo-flora"
-        className="absolute pointer-events-none transition-transform duration-300"
-        style={{ top: '-8%', right: '-10%', zIndex: 1, opacity: 0.75 }}
-      >
-        <DriedSprig style={{ width: 96 }} />
-      </div>
-      <div
-        data-photo-flora
-        className="absolute pointer-events-none transition-transform duration-300 hidden lg:block"
-        style={{ bottom: '2%', left: '-12%', zIndex: 1, opacity: 0.6 }}
-      >
-        <DriedSprig flip style={{ width: 80 }} />
-      </div>
+
 
       {/* Aged paper / photo stack behind main print */}
       <div
