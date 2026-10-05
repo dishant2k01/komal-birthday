@@ -8,7 +8,6 @@ interface BirthdayIntroProps {
   onReveal: () => void;
   disabled?: boolean;
 }
-
 // Sequential lines with their reveal timings (ms delay)
 const lines = [
   { text: 'Hey Komal... ❤️', delay: 0.5, type: 'heading' },
